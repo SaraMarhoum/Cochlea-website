@@ -1,0 +1,58 @@
+/* ============================================================================= */
+/* Visual composer. */
+/* ============================================================================= */
+
+// remove useless top padding on column-inners
+// used selector with high specificity to overwrite visual composer's default styles
+body #wph-main-container .vc_row .vc_column_container .vc_column-inner { padding-top: 0; }
+
+// remove margin-bottom for elements
+.wpb_row, .wpb_content_element, ul.wpb_thumbnails-fluid > li, .wpb_button { margin-bottom: 0; }
+
+// transition for buttons
+.vc_btn3 { .transition-duration(round(@fast-transition * 1.8)); }
+
+// progress bars
+.vc_progress_bar .vc_label { .make-header-font; }
+.vc_progress_bar .vc_single_bar { background-color: @gray-lighter; }
+.vc_single_bar:not(:last-child) { margin-bottom: @line-height-computed !important; }
+
+.vc_btn3-container .vc_general { font-size: @font-size-base - 2px !important; }
+.vc_tta.vc_general .vc_tta-tab > a { padding: 10px 30px; }
+
+.btn-link-container.align_center  { text-align : center; }
+.btn-link-container.align_left    { text-align : left; }
+.btn-link-container.align_right   { text-align : right; }
+
+
+/* ================================= gmaps */
+.wpb_gmaps_widget .wpb_wrapper { background: transparent; padding: 0; }
+
+
+/* ================================= bg video */
+.vc_video-bg-container {
+  background-position : center;
+  background-size     : cover;
+  background-repeat   : no-repeat;
+
+  .vc_video-bg {
+    .fast-transition;
+    opacity    : 0;
+    visibility : hidden;
+
+    &.loaded { opacity : 1; visibility : visible; }
+  }
+}
+
+
+/* ================================= gmaps overlay */
+.wpb_gmaps_widget {
+  position : relative;
+
+  > .gmaps-overlay {
+    cursor   : pointer;
+    position : absolute;
+    top      : 0; bottom : 0;
+    right    : 0; left : 0;
+  }
+}

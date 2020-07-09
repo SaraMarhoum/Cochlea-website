@@ -1,0 +1,106 @@
+/* ============================================================================= */
+/* Site footer. */
+/* ============================================================================= */
+
+.wph-footer-spacer {
+  height : 100px;
+}
+
+.wph-site-footer {
+  .clearfix();
+  display        : table;
+  table-layout   : fixed;
+  font-family    : @headings-font-family;
+  text-transform : uppercase;
+  font-size      : @font-size-small;
+
+  > .left-side,
+  > .right-side {
+    display        : table-cell;
+    width          : 50%;
+    vertical-align : middle;
+    padding        : 35px 0;
+    border-top     : 1px solid @secondary-color;
+  }
+
+  > .right-side {
+    text-align  : right;
+    white-space : nowrap;
+  }
+}
+
+// element styles
+.wph-site-footer #go-to-top {
+  font-size : @font-size-small;
+  padding   : 7px 0;
+  color     : #000;
+
+  > span {
+    margin-right : 5px;
+  }
+
+  > i {
+    font-size : @font-size-large;
+  }
+}
+
+
+// footer appendix columns
+.wph-site-footer .footer-app-col {
+  display  : inline-block;
+  height   : 32px;
+  overflow : hidden;
+
+  // gutters between cols
+  & + .footer-app-col {
+    padding-left : @line-height-computed;
+    margin-left  : @line-height-computed;
+    border-left  : 1px solid #000;
+  }
+
+  // social icons
+  &.site-socials {
+    margin : 0 -10px;
+    > a { font-size : 18px; color : #000; line-height: 32px; }
+  }
+
+  // special styles for searchform
+  > .searchform {
+    width : 100px;
+
+    > input[type=text] {
+      font-family   : @font-family-base;
+      font-size     : @font-size-base;
+      border-bottom : 0 !important;
+    }
+  }
+
+  // mobile style
+  .media-xs & {
+    display : block;
+    border  : 0;
+    margin  : 0;
+    padding : 0;
+
+    & + .footer-app-col {
+      margin-top : @line-height-computed/2;
+    }
+
+    > .searchform {
+      margin-left  : auto;
+      margin-right : auto;
+    }
+  }
+}
+
+
+// only mobile & tablets
+.wph-site-footer {
+  @media (max-width : @screen-xs-max) {
+    display : block;
+
+    > .left-side, > .right-side { display : block; text-align : center; width : 100%; }
+    > .right-side               { border-top : 0; padding-top : 0; margin-top: -10px; }
+    #go-to-top > i              { font-size : @font-size-small; }
+  }
+}

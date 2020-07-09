@@ -1,0 +1,95 @@
+/* ============================================================================= */
+/* Form styling */
+/* ============================================================================= */
+
+::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+  color: transparent;
+}
+
+.wph-narrow-form {
+  max-width : 600px;
+  margin    : 0 auto;
+
+  & + .wpcf7-response-output {
+    max-width    : 580px;
+    margin-left  : auto !important;
+    margin-right : auto !important;
+  }
+}
+
+
+#wph-password-form .form-control {
+  padding : 10px;
+  margin  : 25px 0;
+}
+
+
+.wpcf7-form, .wph-form {
+
+  // text inputs
+  .wpcf7-text,
+  .wpcf7-textarea,
+  .wpcf7-quiz,
+  .wpcf7-date,
+  .form-control {
+    .box-shadow(5px 5px 0 0 rgba(0, 0, 0, 0.15));
+    width         : 100%;
+    border        : 1px solid @brand-primary;
+    outline       : none;
+    background    : #fff;
+    padding       : 15px;
+    color         : #000;
+    margin-bottom : 5px;
+    margin-right  : 5px;
+
+    &.wpcf7-not-valid {
+      border-color : @brand-danger;
+      color        : red;
+    }
+
+    textarea& {
+      line-height: 1.75;
+    }
+  }
+
+  // form groups
+  .wpcf7-form-control-wrap, .form-group {
+    display : block;
+
+    //&:not(:last-child) {
+      margin-bottom : 25px;
+    //}
+
+    > .wpcf7-not-valid-tip { display : none; }
+  }
+
+  // labels
+  .form-label {
+    text-transform : uppercase;
+    color          : #888;
+    font-family    : @headings-font-family;
+    font-size      : 12px;
+    margin-bottom  : 5px;
+  }
+
+  // service elements
+  .ajax-loader {
+    margin-left  : 15px !important;
+    margin-right : -31px;
+  }
+
+  .wpcf7-response-output {
+    font-family : @headings-font-family;
+    padding     : 15px;
+    margin      : 30px 0 0;
+    background  : #fff;
+    border      : 0;
+    border-left : 3px solid @brand-danger;
+
+    &.wpcf7-mail-sent-ok {
+      border-left-color : @brand-success;
+    }
+  }
+}

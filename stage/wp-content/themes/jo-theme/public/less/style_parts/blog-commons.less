@@ -1,0 +1,72 @@
+/* ============================================================================= */
+/* Pager. */
+/* ============================================================================= */
+
+.wph-pagination {
+  .clearfix;
+  text-align  : center;
+  font-size   : 24px;
+  font-family : @headings-font-family;
+
+  .prev-link, .next-link { font-size : 32px; color : #000; float : left; }
+  .next-link { float : right; }
+
+  .page-numbers {
+    padding        : 5px 15px;
+    color          : #888;
+    vertical-align : sub;
+
+    &:hover, &.current { color : #000; }
+  }
+}
+
+
+/* ============================================================================= */
+/* Hero custom styling. */
+/* ============================================================================= */
+
+.post-item .post-header {
+  .clearfix;
+  max-width     : 100%;
+  margin-bottom : @line-height-computed;
+
+  &.img-only {
+    display : inline-block;
+    .mp-target { margin : 0; }
+  }
+}
+
+.post-item .post-title {
+  font-family : @font-family-base;
+  color       : #000;
+  font-size   : 30px;
+  margin      : 10px 0;
+
+  .media-xs & { font-size : @font-size-h3; }
+
+  > a { color : inherit; font-size : inherit; }
+}
+
+.post-item .read-more-btn {
+  text-transform : uppercase;
+  font-family    : @headings-font-family;
+
+  > i { margin-left : 5px; }
+}
+
+.post-item .featured-badge {
+  color          : #ff8b8b;
+  font-size      : 13px;
+  font-style     : italic;
+  text-transform : uppercase;
+}
+
+
+/* ============================================================================= */
+/* Top gutter for hero placement. */
+/* ============================================================================= */
+
+.wph-flat-blog, .wph-blog-single, .wph-blog-chess, .wph-blog-grid {
+  margin-top : 100px;
+  .media-xs & { margin-top : 50px; }
+}

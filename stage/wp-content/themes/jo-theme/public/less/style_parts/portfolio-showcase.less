@@ -1,0 +1,52 @@
+/* ============================================================================= */
+/* Portfolio items showcase widget. */
+/* ============================================================================= */
+
+.wph-portfolio-showcase > .filter {
+  font-family    : @headings-font-family;
+  text-transform : uppercase;
+  font-size      : 0;
+  margin         : -5px -10px;
+  padding-bottom : round(@line-height-computed * 1.2);
+
+  > a {
+    display   : inline-block;
+    padding   : 5px 10px;
+    color     : #000;
+    font-size : 14px;
+
+    &:hover, &.filter-active { color : @link-hover-color; }
+  }
+
+  &:empty { display : none; }
+  .media-xs & { text-align : center; }
+}
+
+.wph-portfolio-showcase > .grid {
+  .clearfix;
+  margin : 0 -@grid-gutter-width/2 -@grid-gutter-width;
+
+  > .item { float : left; padding : 0 @grid-gutter-width/2 @grid-gutter-width; }
+  > .w-1 { width : 100%; }
+  > .w-2 { width : 100% / 2; }
+  > .w-3 { width : 100% / 3; }
+  > .w-4 { width : 100% / 4; }
+
+  // basic column element
+  > .sizer-elem {
+    position   : absolute;
+    opacity    : 0;
+    visibility : hidden;
+    width      : 100% / 12;
+    margin     : 0;
+  }
+
+  // responsiveness
+  @media (max-width : @screen-sm-max) {
+    > .item { width : 100% / 2; }
+  }
+
+  @media (max-width : @screen-xs-max) {
+    > .item { width : 100%; }
+  }
+}

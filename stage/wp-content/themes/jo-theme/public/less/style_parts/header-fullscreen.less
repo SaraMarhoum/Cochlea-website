@@ -1,0 +1,177 @@
+/* ============================================================================= */
+/* Fullscreen navigation. */
+/* ============================================================================= */
+
+
+@fullscreen-nav-bg: rgba(0, 0, 0, 0.9);
+@fullscreen-nav-color: #fff;
+@fullscreen-nav-hover-color: darken(#fff, 45%);
+
+
+/* ================================= menu bars toggle */
+.wph-site-header .menu-bars {
+  display      : inline-block;
+  position     : relative;
+  height       : 11px;
+  width        : 18px;
+  margin-right : 10px;
+
+  > i {
+    .transition(all @default-transition);
+    .box-sizing(content-box);
+    background : currentColor;
+    display    : inline-block;
+    height     : 1px;
+    right      : 0;
+  }
+
+  > i {
+    position : absolute;
+
+    &.first { top : 0; width : 18px; }
+    &.second { top : 100%/2; margin-top : -1px; width : 9px; }
+    &.third { top : 100%; margin-top : -1px; width : 13px; }
+  }
+
+  // active state
+  .wph-fullscreen-nav-open & {
+    > i.first, > i.third { top : 0; width : 15px; margin-top : 5px; }
+
+    > i.first { .rotate(-135deg); }
+    > i.second { opacity : 0; }
+    > i.third { .rotate(135deg); }
+  }
+}
+
+
+
+/* ================================= menu toggle */
+.fullscreen-menu-toggle {
+  display        : inline-block;
+  position       : relative;
+  z-index        : 10010;
+  font-size      : 0;
+  vertical-align : middle;
+  cursor         : pointer;
+
+  > span {
+    .transition(color @default-transition);
+    font-size      : @font-size-base - 1px;
+    font-family    : @headings-font-family;
+    text-transform : uppercase;
+  }
+
+  // active state
+  .wph-fullscreen-nav-open & {
+    > span { color : @fullscreen-nav-color; }
+    > .menu-bars i { background : @fullscreen-nav-color; .box-sizing(border-box); }
+  }
+
+  // hover state
+  .no-touchevents &:hover .menu-bars > i {
+    .animation(wph-bars-animation 350ms 1 linear);
+
+    &.first {}
+    &.second { .animation-delay(100ms); }
+    &.third { .animation-delay(200ms); }
+  }
+
+  // hide text on mobile to enlarge free space
+  @media (max-width : @screen-xs-max) {
+    > span { display : none; }
+  }
+}
+
+.keyframes(wph-bars-animation; {
+  0%, 100% { padding-left: 0; }
+  50% { padding-left: 5px; }
+});
+
+
+
+/* ================================= nav container */
+html.can-hide-scrollbar.wph-fullscreen-nav-open {
+  overflow : hidden;
+}
+
+#wph-fullscreen-navigation {
+  .make-overlay(fixed);
+  display    : none;
+  z-index    : 10000;
+  background : @fullscreen-nav-bg;
+  border-top : 0 solid transparent;
+  width      : auto;
+  right      : -50px;
+  overflow   : hidden;
+
+  > .inner-wrap {
+    .translate(0, -50%);
+    position      : absolute;
+    top           : 50%; left : 0;
+    width         : 100%; max-height : 100%;
+    text-align    : center;
+    padding       : 0 50px 50px 0;
+    overflow-y    : scroll;
+    overflow-x    : hidden;
+  }
+
+  // basic navigation element
+  > .inner-wrap > nav {
+    > .nav_menu,
+    > .nav_menu ul { .reset-box-model(true); }
+  }
+
+  // menu itself
+  .nav_menu a {
+    display     : inline-block;
+    padding     : 5px @line-height-computed;
+    font-size   : @font-size-h2;
+    font-family : @headings-font-family;
+    color       : @fullscreen-nav-color;
+  }
+
+  // drop downs
+  .nav_menu .sub-menu {
+    display : none;
+
+    > li:first-child { padding-top : 25px; }
+    > li:last-child { padding-bottom : 25px; }
+
+    a { font-size : @font-size-h3 - 3px; }
+  }
+
+  .nav_menu li:last-child > .sub-menu > li:last-child { padding-bottom : 0; }
+
+  // hover state
+  .nav_menu li.dropdown-active > a,
+  .nav_menu li a:hover {
+    color : @fullscreen-nav-hover-color;
+  }
+}
+
+/* ================================= socials */
+#wph-fullscreen-navigation .socials { font-size: 0; }
+#wph-fullscreen-navigation .socials a {
+  .transition(color @fast-transition);
+  display    : inline-block;
+  margin-top : (@line-height-computed * 2) - 5px;
+  font-size  : @font-size-h3;
+  padding    : 5px @line-height-computed/2;
+  color      : @fullscreen-nav-color;
+
+  &:hover { color: @fullscreen-nav-hover-color }
+}
+
+
+
+/* ================================= search form */
+#wph-fullscreen-navigation .searchform {
+  width  : 180px;
+  margin : 0 auto @line-height-computed * 2;
+
+  input[type="text"], button { .transition(color @fast-transition); }
+
+  // focus
+  input[type="text"]:focus { color: #eee; }
+  input[type="text"]:focus + button { color: #eee; }
+}

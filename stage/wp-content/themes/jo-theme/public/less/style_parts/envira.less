@@ -1,0 +1,299 @@
+/* ============================================================================= */
+/* Envira plugin styling */
+/* ============================================================================= */
+
+.envira-gallery-theme-wphunters_jo {
+  // filters
+  .envira-tags-filter-list { .clearfix(); margin-bottom : @line-height-computed; }
+  .envira-tags-filter, .envira-tag-filter { margin-bottom : 0 !important; }
+  .envira-tags-filter-link {
+    .transition(color @fast-transition);
+    font-family     : @headings-font-family;
+    text-transform  : uppercase;
+    color           : #000;
+    text-decoration : none;
+
+    &.envira-tags-filter-active, &:hover {
+      color : @link-hover-color;
+    }
+  }
+
+
+  // gallery description
+  .envira-gallery-description {
+    margin  : @line-height-computed 0;
+    padding : 0 !important;
+
+    p { line-height : 1.75 !important; }
+  }
+
+
+  // fix for gutters
+  .envira-gallery-public { width : auto !important; }
+  .envira-gutter(30);
+  .envira-gutter(@i) when (@i > 0) {
+    .envira-gutter((@i - 2));
+    &.col-gutter-@{i} .envira-gallery-public { margin-left : -@i/2px; margin-right : -@i/2px; }
+  }
+
+
+  // proofing addon
+  .envira-proofing-select-image {
+    background : none !important;
+    width      : auto !important;
+    height     : auto !important;
+    padding    : 10px !important;
+    left       : auto !important;
+    right      : 0;
+    cursor     : pointer;
+
+    &:after {
+      .apply-wph-font;
+      content   : '\e885';
+      color     : #fff;
+      font-size : 40px;
+    }
+  }
+
+  .envira-proofing-selected { border : 0 !important; }
+  .envira-proofing-selected .envira-proofing-select-image:after {
+    content : '\e886';
+  }
+
+
+  // proofing summary box
+  @proofing-inner-size: 150px - @line-height-computed * 2;
+  .envira-proofing-summary-box-inner {
+    background : @secondary-color !important;
+    //height     : 150px !important;
+    //bottom     : -80px !important;
+
+    > .images {
+      //height         : 150px !important;
+      //padding-top    : @line-height-computed !important;
+      //padding-bottom : @line-height-computed !important;
+      //margin         : 0 !important;
+      //> .images-inner { height : @proofing-inner-size !important; }
+    }
+
+    .image {
+      //overflow : hidden;
+      //width    : @proofing-inner-size !important;
+      //height   : @proofing-inner-size !important;
+
+      > img { min-height : 100%; min-width : 100%; }
+    }
+  }
+
+
+  // proofing buttons
+  input[name=envira_proofing_save], input[name=envira_proofing_submit] {
+    padding        : 15px 20px !important;
+    min-width          : 140px;
+    height         : auto !important;
+    background     : @brand-primary !important;
+    border-radius  : @btn-border-radius-base !important;
+    color          : #fff !important;
+    border         : 1px solid @brand-primary;
+    font-family    : @headings-font-family;
+    text-transform : uppercase;
+    font-size      : @font-size-base !important;
+  }
+
+  input[name=envira_proofing_save] {
+    background-color : transparent !important;
+    color            : @brand-primary !important;
+  }
+
+  .envira-proofing-summary-box-inner .buttons {
+    //height         : 150px !important;
+    //padding-top    : @line-height-computed !important;
+    //padding-bottom : @line-height-computed !important;
+
+    button {
+      border         : 1px solid @brand-primary;
+      font-family    : @headings-font-family;
+      text-transform : uppercase;
+      color          : @brand-primary !important;
+
+      &[name=envira_proofing_submit] {
+        background : @brand-primary !important;
+        color      : #fff !important;
+      }
+    }
+  }
+
+
+  // other
+  .envira-download-all {
+    display       : inline-block;
+    margin-bottom : @line-height-computed;
+  }
+
+  .envira-exif {
+    position   : absolute;
+    bottom     : 0;
+    left       : 0;
+    width      : 100%;
+    background : #fff;
+    background : fade(#fff, 90%);
+    padding    : 15px;
+    text-align : left !important;
+
+    > div {
+      padding        : 0 !important;
+      font-size      : 14px;
+      font-family    : @headings-font-family;
+      text-transform : uppercase;
+      color          : #000;
+      line-height    : 1.75;
+
+      &:not(:last-child):after {
+        display      : inline-block;
+        content      : ',';
+        margin-right : 5px;
+      }
+    }
+
+    > div > span {
+      background : transparent !important;
+      padding    : 0 !important;
+    }
+
+    &:empty { display : none; }
+  }
+}
+
+#envira-proofing-messages {
+  margin-bottom : @line-height-computed !important;
+  border        : 3px solid @secondary-color;
+  padding       : 15px;
+}
+
+
+/* ================================= lightbox theme */
+.envirabox-theme-wphunters_jo,
+#envirabox-wrap {
+  .box-shadow(~'none !important');
+  padding : 0 !important;
+
+  // inner container
+  #envirabox-content {
+    .box-shadow(~'none !important');
+    border-width  : 0 !important;
+    border-radius : 0 !important;
+    width         : 100% !important;
+  }
+
+  // exif extension
+  .envirabox-exif > .envira-exif {
+    background : #fff !important;
+    background : fade(#fff, 90%) !important;
+    padding    : 10px !important;
+
+    > div {
+      padding        : 0 !important;
+      margin         : 0 !important;
+      font-size      : 14px;
+      font-family    : @headings-font-family;
+      text-transform : uppercase;
+      color          : #000;
+      line-height    : 1.75;
+
+      &:not(:last-child):after {
+        display      : inline-block;
+        content      : ',';
+        margin-right : 5px;
+      }
+    }
+
+    > div > span {
+      background : transparent !important;
+      padding    : 0 !important;
+    }
+
+    &:empty { display : none; }
+  }
+
+  // inner caption
+  #envirabox-title-inside, #envirabox-title-over, .envirabox-title {
+    background     : #fff !important;
+    background     : fade(#fff, 90%) !important;
+    padding        : 10px !important;
+    font-size      : 14px;
+    font-family    : @headings-font-family;
+    text-transform : uppercase;
+    color          : #000;
+    line-height    : 1.75;
+    display        : block;
+  }
+
+  .envirabox-title {
+    width : 100%;
+  }
+
+  // control buttons
+  #envirabox-close, .envirabox-close {
+    background : transparent !important;
+    width      : auto !important;
+    height     : auto !important;
+    top        : -20px !important;
+    right      : -20px !important;
+
+    &:after {
+      .apply-wph-font;
+      content   : '\e886';
+      color     : #fff;
+      font-size : 40px;
+    }
+  }
+
+  #envirabox-right, #envirabox-left, .envirabox-nav {
+    .transition(opacity @fast-transition);
+    opacity : 0;
+    &:hover { opacity : 1; }
+
+    > span {
+      background : none;
+      width      : auto;
+      height     : auto;
+
+      &:after {
+        .apply-wph-font;
+        content   : '\e887';
+        color     : #fff;
+        font-size : 40px;
+      }
+    }
+  }
+
+  #envirabox-left > span:after, .envirabox-prev > span:after {
+    content : '\e888';
+  }
+
+  .envira-download-button > a {
+    display     : inline-block;
+    background  : transparent !important;
+    width       : auto !important;
+    height      : auto !important;
+    text-indent : 0 !important;
+    font-size   : 0 !important;
+
+    &:after {
+      .apply-wph-font;
+      content   : '\e889';
+      color     : #fff;
+      font-size : 40px;
+    }
+  }
+}
+
+#envirabox-buttons { display : none; }
+
+
+/* ================================= lightbox thumbs */
+#envirabox-thumbs ul li {
+  &, a { border: 0 !important; }
+
+  &.active img { opacity: 0.3; }
+}

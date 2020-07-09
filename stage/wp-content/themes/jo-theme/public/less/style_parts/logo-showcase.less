@@ -1,0 +1,74 @@
+/* ============================================================================= */
+/* Logo showcase VC module. */
+/* ============================================================================= */
+
+.wph-logo-showcase .slick-slide {
+  .user-select(none);
+  text-align : center;
+  outline    : none;
+  padding    : 35px 100px;
+
+  &.slick-center {
+    border-left: 1px solid @secondary-color;
+    border-right: 1px solid @secondary-color;
+  }
+
+  img {
+    width     : auto;
+    height    : auto;
+    max-width : 100%;
+    outline   : none;
+  }
+
+  a[href="javascript:return false;"] {
+    cursor  : default;
+    outline : none;
+  }
+}
+
+/* ================================= arrows & gradient */
+.wph-logo-showcase {
+  position : relative;
+  color    : #fff;
+
+  .slick-prev { left: 0; }
+  [dir="rtl"] .slick-prev { left: auto; right: 0; }
+
+  .slick-next { right: 0; }
+  [dir="rtl"] .slick-next { left: 0; right: auto; }
+
+  .slick-prev, .slick-next {
+    color: #b4b4b4;
+  }
+
+  &:before, &:after {
+    position  : absolute;
+    top       : 0; bottom : 0;
+    height    : 100%;
+    max-width : 50%;
+    width     : 250px;
+    display   : block;
+    content   : '';
+    z-index   : 500;
+  }
+
+  &:after {
+    right      : 0;
+    background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, currentColor 50%, currentColor 100%);
+    background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,currentColor 50%,currentColor 100%);
+    background: linear-gradient(to right,  rgba(255,255,255,0) 0%,currentColor 50%,currentColor 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+  }
+
+  &:before {
+    left       : 0;
+    background: -moz-linear-gradient(left,  currentColor 0%, currentColor 50%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(left,  currentColor 0%,currentColor 50%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(to right,  currentColor 0%,currentColor 50%,rgba(255,255,255,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+  }
+
+  @media (max-width: @screen-sm-max) {
+    &:before, &:after { width: 100px; }
+  }
+}

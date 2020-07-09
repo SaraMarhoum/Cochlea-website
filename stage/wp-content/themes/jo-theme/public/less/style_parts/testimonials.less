@@ -1,0 +1,78 @@
+/* ============================================================================= */
+/* Testimonials. */
+/* ============================================================================= */
+
+.wph-testimonials > .slider {
+  text-align    : center;
+  margin-bottom : 50px;
+
+  .text-inner {
+    .user-select(none);
+    font-size   : @font-size-large;
+    line-height : 1.75;
+    color       : #505050;
+    quotes      : "\201c" "\201d" "\2018" "\2019";
+
+    &:before  { content : open-quote; }
+    &:after   { content : close-quote; }
+
+    > * { display : inline-block; }
+  }
+}
+
+/* ================================= authors box */
+.wph-testimonials > .authors-box {
+  max-width       : 675px;
+  margin          : 0 auto;
+  display         : flex;
+  justify-content : space-around;
+  flex-flow       : row wrap;
+  text-align      : center;
+  font-size       : 0;
+
+  > .item {
+    .perspective(100px);
+    font-size : @font-size-base;
+    display   : inline-block;
+    cursor    : pointer;
+
+    > img {
+      .transition-transform(@default-transition);
+      .backface-visibility(hidden);
+      width         : 80px; height : 80px;
+      border-radius : 50%;
+      margin-bottom : 15px;
+      opacity       : 0.5;
+    }
+
+    .name, .info {
+      .transition(opacity @default-transition);
+      font-family : @headings-font-family;
+      opacity     : 0;
+      color       : #000;
+    }
+
+    .info {
+      text-transform : uppercase;
+      font-size      : @font-size-small;
+      color          : #828282;
+    }
+
+    // active state
+    &.active {
+      .name, .info { opacity : 1; }
+      > img { .translate3d(0, 0, 10px); opacity : 1; }
+    }
+
+    .no-touch &:hover > img { opacity : 0.75; }
+  }
+
+
+  // mobile mode
+  @media (max-width : @screen-sm-max) {
+    display : block;
+
+    > .item { display : none; }
+    > .item.active { display : block; }
+  }
+}

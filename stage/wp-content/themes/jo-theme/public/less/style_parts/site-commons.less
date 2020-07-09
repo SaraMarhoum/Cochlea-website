@@ -1,0 +1,210 @@
+/* ============================================================================= */
+/* Common site elements. */
+/* ============================================================================= */
+
+
+/* ================================= search form */
+#searchform { position: relative; }
+
+#searchform input[type="text"] {
+  background    : transparent;
+  border        : 0; border-bottom : 1px solid currentColor;
+  font-style    : italic;
+  //font-size     : @font-size-small;
+  padding       : 5px 25px 5px 0;
+  outline       : none;
+  width         : 100%;
+  border-radius : 0;
+
+  // colored placeholder
+  &::-webkit-input-placeholder  { color : currentColor; }
+  &::-moz-placeholder           { color : currentColor; }
+  &:-moz-placeholder            { color : currentColor; }
+  &:-ms-input-placeholder       { color : currentColor; }
+}
+
+#searchform .submit-btn {
+  position   : absolute;
+  right      : 0; top : 5px;
+  background : transparent;
+  border     : 0; padding : 0;
+  outline    : none;
+}
+
+
+/* ================================= tag listing */
+.tagcloud { font-size : 0; margin: 0 -10px; }
+
+.tagcloud a {
+  text-decoration : none !important;
+  display         : inline-block;
+  padding         : 0 10px;
+  position        : relative;
+  //font-family     : @headings-font-family;
+  font-size       : 18px !important;
+  color           : #141414;
+  text-transform  : lowercase;
+  line-height     : 1.75;
+
+  &:after {
+    .transition(opacity @fast-transition);
+    position         : absolute;
+    content          : ''; z-index : -10;
+    bottom           : 7px; left : 10px; right : 10px;
+    height           : 2px;
+    background-color : lighten(@brand-primary, 15%);
+    opacity          : 1;
+  }
+
+  &:hover:after { opacity: 0; }
+}
+
+
+/* ================================= site social icons */
+.site-socials {
+  font-size : 0;
+  margin    : 0 -7px;
+
+  > a {
+    text-decoration : none !important;
+    font-size       : @font-size-base;
+    line-height     : 1;
+    padding         : 0 7px;
+
+    &:hover { opacity : 0.5; }
+  }
+
+  .site-widget &:not(:first-child) { margin-top : 7px; }
+}
+
+
+/* ================================= mouse parallax module */
+.mp-container {
+  overflow : hidden;
+
+  // default transition for target
+  .mp-target {
+    .transition(all @fast-transition ease-out 0s);
+    .transform(~'scale(1, 1) translate3d(0, 0, 0)');
+    width                       : auto !important;
+    height                      : auto !important;
+    margin                      : -12px;
+    -webkit-backface-visibility : hidden;
+  }
+
+  // reset transform on mouseout
+  &.mp-initial .mp-target {
+    .transform(~'scale(1) !important');
+  }
+}
+
+
+/* ================================= lazy preloader */
+.lazy-wrap {
+  position : relative;
+
+  &:after {
+    .secondary-preloader;
+    content    : '';
+    width      : 50px; height : 50px;
+    position   : absolute;
+    top        : 50%; left : 50%;
+    margin-top : -25px; margin-left : -25px;
+  }
+}
+
+
+/* ================================= container inner alignment */
+.wph-button-container {
+  &.align_left { text-align : left; }
+  &.align_center { text-align : center; }
+  &.align_right { text-align : right; }
+}
+
+
+/* ================================= styled text widget */
+.wph-styled-input p {
+  font-size   : inherit !important;
+  color       : inherit !important;
+  line-height : inherit !important;
+}
+
+
+/* ================================= generic settings for custom sliders */
+.slick-slider-api .slick-arrow {
+  margin-top : -18px;
+
+  &:before {
+    .transition(opacity @fast-transition);
+    color     : #fff;
+    opacity   : 0;
+    font-size : 36px;
+  }
+
+  &.slick-next { right: 15px; }
+  [dir="rtl"] &.slick-prev { right: 15px; left: auto; }
+}
+
+.slick-slider-api .slick-slide {
+  padding : 0 @grid-gutter-width/2;
+
+  img { height : 350px; }
+}
+
+.slick-slider-api {
+  margin-left : -@grid-gutter-width/2;
+
+  .media-xs & .slick-arrow:before,
+  &:hover .slick-arrow:before {
+    opacity: 1;
+  }
+}
+
+
+/* ================================= share buttons widget */
+.share-buttons {
+  margin    : 0 -5px;
+  font-size : 0;
+
+  > a {
+    display         : inline-block;
+    font-size       : @font-size-base;
+    padding         : 0 5px;
+    color           : #000;
+    text-decoration : none;
+    line-height     : 1;
+
+    &:hover { opacity : 0.5; }
+  }
+}
+
+.share-buttons-container {
+  display        : inline-block;
+  vertical-align : middle;
+  color          : #888;
+
+  &.align_center { display : block; text-align : center; }
+  &.align_left { text-align : left; }
+  &.align_right { display : block; text-align : right; }
+
+  > div { display : inline-block; vertical-align : middle; }
+
+  > .text-inner {
+    margin-right   : 10px;
+    text-transform : uppercase;
+    font-family    : @headings-font-family;
+
+    &:empty { display : none; }
+  }
+
+  > .share-buttons { padding-top : @line-height-computed/2; padding-bottom : @line-height-computed/2; }
+  > .share-buttons > a:hover { opacity : 0.5; }
+}
+
+
+/* ================================= style for dangers in VC pre-defined templates */
+.wph-vc_notice {
+  padding    : 15px;
+  background : @brand-danger;
+  color      : #fff;
+}

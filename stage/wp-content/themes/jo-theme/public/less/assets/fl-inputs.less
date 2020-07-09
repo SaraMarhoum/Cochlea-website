@@ -1,0 +1,102 @@
+/* ================================= float label inputs */
+
+// originally written by David Thalmann (http://codepen.io/boast/pen/pLjld)
+// rewritten & improved by WPHunters
+
+.fl-input-container {
+  position    : relative;
+  padding-top : 15px;
+
+  // main input
+  > .fl-input {
+    position      : relative; z-index : 10;
+    background    : transparent;
+    border        : 0; outline : none;
+    color         : inherit;
+    border-bottom : 1px solid currentColor;
+    padding       : 5px 0;
+    width         : 100%;
+    font-size     : @font-size-base;
+    border-radius : 0;
+
+    // hide placeholder
+    &::-webkit-input-placeholder { color : transparent; }
+    &::-moz-placeholder { color : transparent; }
+    &:-moz-placeholder { color : transparent; }
+    &:-ms-input-placeholder { color : transparent; }
+
+    // simulate placeholder with label
+    & + label {
+      .transition(all @fast-transition);
+      .transform-origin(left center);
+      .translate(0, 20px);
+      position    : absolute;
+      top         : 0;
+      left        : 0;
+      width       : 100%;
+      z-index     : 5;
+
+      // Some nice styling
+      font-size   : @font-size-base;
+      font-weight : 400;
+      color       : currentColor;
+      margin      : 0;
+    }
+
+    // THE MAGIC
+    // as soon as we start typing, the "required" attribute will
+    // set the state to valid and our pseudo selector will match
+    &.fl-not-empty + label,
+    &:focus + label {
+      .transform(~'scale(0.85) translateY(-5px)');
+    }
+  }
+
+  // state modifiers
+  &.has-error > .fl-input {
+    color        : @state-danger-text;
+    border-color : @state-danger-border;
+    & + label { color: @state-danger-text; }
+  }
+}
+
+/* ================================= special styles for selects */
+.fl-input-container.fl-select {
+  > select.fl-input {
+    .transition(color @fast-transition);
+    .transition-delay(250ms);
+
+    -webkit-appearance    : none;
+    -moz-appearance       : none;
+    appearance            : none;
+    -webkit-border-radius : 0;
+    cursor                : pointer;
+
+    &[data-value="*"] {
+      .transition-delay(0ms);
+      color: transparent;
+    }
+
+    &[data-value="*"] + label {
+      .translate(0, 20px);
+    }
+
+    > option { color: #000; }
+  }
+
+  &:after {
+    .apply-unycon-font;
+    .translate(0, -50%);
+    position    : absolute;
+    right       : 5px; top : 50%;
+    padding-top : 15px;
+    content     : '\e47c';
+  }
+}
+
+
+/* ================================= integration with contact form 7 */
+.wpcf7 .fl-input {
+  color         : #000;
+  border-bottom : 2px solid #d0d0d0;
+}

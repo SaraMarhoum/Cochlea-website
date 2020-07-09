@@ -1,0 +1,12 @@
+/* ================================= typed.js support */
+.typed-cursor {
+  .animation(typed-blink 0.7s infinite);
+  .opacity(1);
+  display : inline-block;
+}
+
+.keyframes('typed-blink', {
+  0% { .opacity(1); }
+  50% { .opacity(0); }
+  100% { .opacity(1); }
+});

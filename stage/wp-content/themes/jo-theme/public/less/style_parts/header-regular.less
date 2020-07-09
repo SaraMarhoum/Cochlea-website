@@ -1,0 +1,94 @@
+/* ============================================================================= */
+/* Site Header. Layout 1. */
+/* ============================================================================= */
+
+
+/* ================================= commons */
+.wph-site-header[data-layout="regular"] {
+
+  .right-side { .clearfix; float : right; }
+  .right-side > * { float : left; }
+
+}
+
+
+/* ================================= search field */
+.wph-site-header[data-layout="regular"] .site-search {
+  padding : 5px @line-height-computed;
+
+  // we need to rise up this button to make it look awesome
+  .toggle-icon {
+    position       : absolute;
+    right          : @line-height-computed;
+    top            : 0;
+    padding        : 8px 0;
+    cursor         : pointer;
+    vertical-align : middle;
+    z-index        : 15;
+  }
+
+  // left and right borders made via pseudo-elements
+  &:after, &:before {
+    position         : absolute;
+    content          : '';
+    top              : 0; bottom : 0;
+    width            : 1px;
+    background-color : currentColor;
+    opacity          : 0.5;
+  }
+  &:before { left : 0; }
+  &:after { right : 0; }
+
+  // search form itself
+  .hidden-form {
+    position : absolute; z-index: 10;
+    top      : 0; bottom : 0;
+    left     : @line-height-computed;
+    right    : @line-height-computed;
+
+    // hide standard form's button to avoid overlap
+    .submit-btn { display: none; }
+  }
+}
+
+// transition
+.wph-site-header[data-layout="regular"] .site-search {
+  .transition(width @fast-transition + 50ms);
+  width : 60px; // default width
+
+  // default state
+  .hidden-form {
+    .transition(opacity @fast-transition);
+    visibility : hidden;
+    opacity    : 0;
+  }
+
+  // open state
+  &.search-open {
+    width : 175px;
+
+    .hidden-form {
+      .transition-delay(@fast-transition + 50ms); // delay needed only on show
+      opacity    : 1;
+      visibility : visible;
+    }
+  }
+}
+
+
+/* ================================= site socials */
+.wph-site-header[data-layout="regular"] .site-socials {
+  padding-left : @line-height-computed/2;
+
+  .unycon, .fa { vertical-align : middle; }
+}
+
+
+/* ================================= responsibility */
+.wph-site-header[data-layout="regular"] +
+.wph-site-header[data-layout="fullscreen"] { display : none; }
+
+@media (max-width : @screen-md-max) {
+  .wph-site-header[data-layout="fullscreen"] { display : block !important; }
+  .wph-site-header[data-layout="regular"] { display : none; }
+}

@@ -1,0 +1,71 @@
+/* ============================================================================= */
+/* Header styles. */
+/* ============================================================================= */
+
+
+/* ================================= style 1 and style 2 commons */
+.wph-site-header.header-layout-1 {
+
+  // base layout settings
+  .left-side,
+  .right-side,
+  .center-block { width : 25%; display : table-cell; vertical-align : middle; }
+
+  .center-block { width : 50%; }
+
+  // proper text align
+  .center-block { text-align : center; }
+  .right-side { text-align : right; }
+
+}
+
+
+
+/* ================================= two-line headers */
+.wph-site-header.header-layout-2 {
+  display : block;
+
+  // first line with logo
+  .first-line {
+    .transition(none);
+    display       : block;
+    text-align    : center;
+    margin-bottom : round(@line-height-computed * 1.5);
+  }
+
+
+  // second line with menus
+  .second-line {
+    display      : table;
+    table-layout : fixed;
+    width        : 100%;
+
+    // base layout settings
+    .left-side,
+    .right-side,
+    .center-block {
+      display        : table-cell;
+      vertical-align : middle;
+      width          : 25%;
+    }
+
+    .center-block { width : 50%; text-align : center; }
+    .right-side { text-align : right; }
+  }
+
+
+  // search form alignment reset
+  #searchform { margin-left : 0; }
+  .left-side .socials { display : none; }
+
+}
+
+
+/* ================================= switching between headers */
+.wph-site-header[data-visibility="mobile"] { display : none; }
+.media-xs .wph-site-header[data-visibility="mobile"] { padding-top : 25px; padding-bottom : 25px; }
+
+@media (max-width : @screen-md-max) {
+  .wph-site-header[data-visibility="mobile"] { display : table; }
+  .wph-site-header[data-visibility="desktop"] { display : none; }
+}
