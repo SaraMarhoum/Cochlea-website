@@ -1,0 +1,1 @@
+Jo is a Photography Portfolio WordPress Theme, handcrafted for creative folks who appreciate minimalism. It comes assembled with 3 designed Home-pages, 4 types of Portfolio listing, 4 types of Gallery. In addition to common pages, we added page for Booking and Pricing Table.
