@@ -1,1 +1,0 @@
-<span data-typed-str="{str}" data-typed-repeat="{repeat}" data-typed-cursor="{cursor}" class="{classes}"></span>

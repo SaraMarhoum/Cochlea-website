@@ -1,1 +1,0 @@
-[vc_row css=".vc_custom_1468000810711{margin-top: -15px !important;}"][vc_column][vc_empty_space height="15px" el_class="visible-xs"][wph_jo_portfolio_showcase hide_filter="yes" css_columns="3" items="size:All|order_by:date|order:DESC|post_type:jo-portfolio" teaser_layout="layout_2" teaser_sl="tags" masonry="yes"][vc_empty_space height="100px"][/vc_column][/vc_row]
