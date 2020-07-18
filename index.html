@@ -1,41 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="Design\Assets\png\coat-of-arms-of-morocco-logo-D-1.png" rel="shortcut icon"/>
-    <title>Cochlea Prod</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Exo+2&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="src/css/normalize.css">
-    <link rel="stylesheet" href="src/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link href="Design\Assets\png\coat-of-arms-of-morocco-logo-D-1.png" rel="shortcut icon" /> -->
+  <title>Cochlea Prod</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Exo+2&display=swap"
+    rel="stylesheet"> -->
+  <link rel="stylesheet" href="src/css/normalize.css">
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/other.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap');
+    </style>
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header class="header">
-        
-    </header>
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
 
-    
-    
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer_recommmandation">
+    </nav>
+
+
+
+  </header>
+
+  <section class="aboutus">
+    <div class="aboutus__container">
+      <h6>
+        About us
+      </h6>
+      <h1>
+        COCHLEA PRODUCTION
+      </h1>
+      <p>
+        Cochlea offers a complete service for the design and manufacture of communication films, mastering the entire
+        production process from design to final delivery of the content. For our agency, the recipe for an effective
+        video is a
+        clever mix of listening, ideas, understanding of the issues and technical know-how.
+      </p><br><br>
+      <p>
+        We create tailor-made audiovisual content to meet our clients’ communication objectives
+        and ensure the best ROI. You have a message to convey, a vision to share, a lesson to teach, a
+        product or service to promote, our agency helps you produce value through image.
+      </p><br><br>
+      <!-- <button>
+          LEARN MORE
+        </button> -->
+    </div>
+    <div class="wrapper">
+      <div class="link_wrapper">
+        <a href="#">LEARN MORE</a>
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+            <path
+              d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z" />
+          </svg>
         </div>
-    </footer>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer_recommmandation">
+    </div>
+  </footer>
 
 </body>
 <script>
-    $(document).ready(function () {
-      $('header').load("Hero/header.html");
-    });
-  </script>
-  <script>
-    $(document).ready(function () {
-      $('.footer_recommmandation').load("Hero/footer.html");
-    });
-  </script>
- 
+  $(document).ready(function () {
+    $('navbar').load("Hero/navbar.html");
+  });
+</script>
+<script>
+  $(document).ready(function () {
+    $('.footer_recommmandation').load("Hero/footer.html");
+  });
+</script>
+
 </html>
