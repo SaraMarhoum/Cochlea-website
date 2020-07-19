@@ -13,10 +13,10 @@
 
 .aboutus {
   background-image: url(/Design/Assets/png/MARIA111-2048x546.png);
-  background-position: center;
+  background-position: 38%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-x: -353px;
+  // background-position-x: -353px;
 
   .aboutus__container {
 
@@ -37,6 +37,7 @@
 
 @media screen and (max-width: 1163px) {
   .aboutus {
+    background-position: 47%;
     .aboutus__container {
       max-width: 90%;
       font-size: 0.9rem;
