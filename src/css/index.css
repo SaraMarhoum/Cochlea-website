@@ -1,6 +1,15 @@
-*{margin:0;padding:0;box-sizing:border-box;font-size:16px}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-size:16px
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap%27');
 /*# sourceMappingURL=style.css.map */
+
+
+/* **************************************Header************************** */
 /* header  Navbarre */
 .navbar-nav{
     display:  block;
@@ -215,7 +224,7 @@ nav.black{
         text-decoration: none;
     } 
     .aboutus{
-       margin-top: 278px; 
+       margin-top: 178px; 
        background-size: auto;
     } 
     .aboutus__container p{
@@ -226,5 +235,171 @@ nav.black{
         font-weight: 700;
        }
 }
+
+
+
+
+/* **************************************About us button************************** */
+.wrapper{
+    position:absolute;
+    /* top: 80%; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -86px;
+  }
+  
+  .link_wrapper{
+    position: relative;
+  }
+  
+  .link_wrapper a{
+    display: block;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    background: #333;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid #333;
+    transition: all .35s;
+  }
+  
+  .icon{
+    width: 50px;
+    height: 50px;
+    border: 3px solid transparent;
+    position: absolute;
+    transform: rotate(45deg);
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: all .35s;
+  }
+  
+  .icon svg{
+    width: 30px;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    transform: rotate(-45deg);
+    fill: #000000;
+    transition: all .35s;
+  }
+  
+  .link_wrapper a:hover{
+    width: 200px;
+    border: 3px solid #000000;
+    background: transparent;
+    color: #000000;
+  }
+  
+  .link_wrapper a:hover + .icon{
+    border: 3px solid #000000;
+    right: -25%;
+  }
+
+
+  /* **************************************Video section************************** */
+.section {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.section h1 {
+  text-align: center;
+  font-size: 6rem;
+  font-family: "Cookie";
+  padding: 20px;
+  margin: 15px;
+  z-index: 1;
+  
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.color-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100vh;
+  opacity: 0.2;
+}
+
+/* **************************************Video section************************** */
+
+.fa__video{
+  display: flex;
+  
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 20px;
+  z-index: 1;
+  border-radius: 50%;
+  
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
 
 
