@@ -29,12 +29,12 @@
     font-size: 15px;
     text-transform: uppercase;
 }
-/* .navbar-brand {
+/*.navbar-brand {
     float: left;
     height: 50px;
     font-size: 18px;
     line-height: 20px;
-} */
+}*/
 .navbar-light .navbar-brand .navbar-toggler{
     color: #fff;
     font-size: 25px;
@@ -150,6 +150,7 @@ nav.black{
     background: #000;
     color: #fff;
     padding: 10px 25px;
+    border-radius: 40px;
     font-size: 28px;
     text-transform: uppercase;
     display: inline-block;
@@ -200,7 +201,7 @@ nav.black{
     }
     .carousel-caption h2{
         font-size: 16px;
-        font-weight: 80;
+        font-weight: 40;
         text-transform: uppercase;
         letter-spacing: 1px;
     }
