@@ -216,7 +216,15 @@ nav.black{
     } 
     .aboutus{
        margin-top: 278px; 
+       background-size: auto;
     } 
+    .aboutus__container p{
+        font-size: 14px;
+       }
+       .aboutus__container h1{
+        font-size: 23px;
+        font-weight: 700;
+       }
 }
 
 
