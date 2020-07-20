@@ -1,4 +1,4 @@
-*{margin:0;padding:0;box-sizing:border-box;font-family:Cairo,sans-serif;font-size:16px}
+*{margin:0;padding:0;box-sizing:border-box;font-size:16px}
 @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap%27');
 /*# sourceMappingURL=style.css.map */
 /* header  Navbarre */
@@ -101,9 +101,9 @@ nav.black{
   .carousel-fade .carousel-control {
     z-index: 2;
   }
-  html,body{
+  /* html,body{
       height: 100%;
-  }
+  } */
   .carousel,
   .carousel-inner,
   .carousel-inner .item::before{
@@ -213,5 +213,10 @@ nav.black{
         display: inline-block;
         margin-top: 5px;
         text-decoration: none;
-    }  
+    } 
+    .aboutus{
+       margin-top: 278px; 
+    } 
 }
+
+

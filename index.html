@@ -19,12 +19,71 @@
   <link rel="stylesheet" href="src/css/style.css">
   <link rel="stylesheet" href="src/css/other.css">
   <link rel="stylesheet" href="app/scss/style.scss">
+  <link rel="stylesheet" href="src/css/header.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap');
     </style>
 </head>
 
 <body>
+
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html"><img src="./images/logo/logo cochlea .png" alt="" width="50px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><img src="./images/uk.png" style="width: 16px;" alt=""></a>
+            <img src="./images/flag.png" style="width: 16px;" alt=""></a>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </nav>
+      
+      <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+            <div class="active item">
+                <div class="carousel-caption">
+                    <h1 class="animated slideInDown" style="animation-delay: 1s">Cochlea Production</h4>
+                    <h2  class="animated fadeInUp" style="animation-delay: 2s">Are you ready to shoot</h2>
+                    <p class="animated zoomIn" style="animation-delay: 3s"><a href="#">Contact US</a></p>
+                </div>
+            </div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#carousel" data-slide="prev"></a>
+        <a class="carousel-control right" href="#carousel" data-slide="next"></a>
+    </div>
+  </header>
 
   <!-- Header -->
   <!-- <header class="header">
@@ -36,11 +95,11 @@
 
   </header> -->
 
-  <section class="aboutus">
+  <div class="aboutus">
     <div class="aboutus__container">
-      <h6>
+      <h4>
         About us
-      </h6>
+      </h4>
       <h1>
         COCHLEA PRODUCTION
       </h1>
@@ -68,7 +127,7 @@
       </div>
 
     </div>
-  </section>
+  </div>
 
 
 
