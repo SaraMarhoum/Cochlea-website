@@ -103,6 +103,11 @@
   .footer__quickLinks, ul, li, a:hover{
     font-size: 18px;
   }
+  .footer__logoSM {
+    .logo__footer{
+      width: 98px;
+    }
+  }
   .footer__contact{
     padding-bottom: 20px;
   }
@@ -116,11 +121,32 @@
     text-align: center;
   }
   
- 
 }
 
 
-
+@media screen and (max-width: 1163px) {
+  .Footer{
+    .footer__flex_container{
+      .footer__logoSM {
+        .logo__footer{
+          width: 50px;
+        }
+        img{
+          width: 30px;
+        }
+        p{
+          display: none;
+        }
+        h3{
+          font-size: 18px;
+        }
+      }
+      .footer__contact{
+        padding-top: 44px;
+      }
+    }
+  }
+}
 
 
 @import "test";
