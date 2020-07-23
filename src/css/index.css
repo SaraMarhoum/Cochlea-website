@@ -18,10 +18,10 @@
     float: left;
 }
 .navbar-nav{
-    width: 95%;
+    width: 100%;
   }
 .navbar-nav ul{
-    float: left;
+    float: right;
     list-style: none;
   }
 .navbar-nav ul li{
@@ -66,10 +66,10 @@
 
 .navbar-nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
 }
 .nav-link{
-    padding: .5rem 1rem;
+    padding: .5rem 6rem;
 }
 .nav-link.active, .nav-link:focus{
     color: #fff;
@@ -319,13 +319,13 @@ nav.black{
   overflow: hidden;
 }
 
-#myVideo {
+/* #myVideo {
   position: absolute;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-}
+} */
 
 /* Add some content at the bottom of the video/page */
 .content {
