@@ -7,7 +7,7 @@
   <!-- <link href="Design\Assets\png\coat-of-arms-of-morocco-logo-D-1.png" rel="shortcut icon" /> -->
   <title>Cochlea Prod</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  
+
   <!--Boostrap CDN-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css">
@@ -30,6 +30,8 @@
 </head>
 
 <body>
+
+  <!-- **************************************Header section************************** -->
 
   <header class="header">
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
@@ -100,7 +102,10 @@
 
   </header> -->
 
-  <!-- SECTION ABOUT US-->
+  <!-- ************************************** End Header section************************** -->
+
+
+  <!-- **************************************About Us section************************** -->
   <div class="aboutus">
     <div class="aboutus__container">
       <h4>
@@ -134,62 +139,131 @@
 
     </div>
   </div>
-  
+
+  <!-- ************************************** End About Us section************************** -->
+
+
+  <!-- **************************************Video section************************** -->
+
   <section class="video">
     <video autoplay muted loop id="myVideo">
       <source src="Design/Assets/vidéo/for web site hd.mp4" type="video/mp4">
     </video>
   </section>
 
+  <!-- **************************************End Video section************************** -->
+
+
+  <!-- **************************************Portfolio section************************** -->
+
+
+  <section class="Portfolio">
+    <h1>Portfolio Gallery</h1>
+    <div class="toolbar mb2 mt2">
+      <button class="btn fil-cat" href="" data-rel="all">All</button>
+      <button class="btn fil-cat" data-rel="web">Websites</button>
+      <button class="btn fil-cat" data-rel="flyers">Flyers</button>
+      <button class="btn fil-cat" data-rel="bcards">Business Cards</button>
+    </div>
+
+    <div id="portfolio">
+      <div class="tile scale-anm web all">
+        <img
+          src="https://images.unsplash.com/photo-1556103255-4443dbae8e5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+          alt="" />
+      </div>
+      <div class="tile scale-anm bcards all">
+        <img src="https://i.pinimg.com/originals/53/31/fc/5331fcab06dc662b9ea797b99d2b4b8f.jpg" alt="" />
+      </div>
+      <div class="tile scale-anm web all">
+        <img
+          src="https://static.boredpanda.com/blog/wp-content/uploads/2015/05/travel-nature-photography-depression-rescue-william-patino6.jpg"
+          alt="" />
+      </div>
+      <div class="tile scale-anm web all">
+        <img src="https://expertphotography.com/wp-content/uploads/2018/07/nature-photography.jpg" alt="" />
+      </div>
+      <div class="tile scale-anm flyers all">
+        <img src="https://phototrend.fr/wp-content/uploads/2019/04/lonely-tree-david-hall-759x500.jpg" alt="" />
+      </div>
+      <div class="tile scale-anm bcards all">
+        <img
+          src="https://cdn.theatlantic.com/assets/media/img/photo/2019/02/winners-2019-underwater-photographe-2/u01_MCPOTY-1/original.jpg"
+          alt="" />
+      </div>
+      <div class="tile scale-anm flyers all">
+        <img
+          src="https://cdn.theatlantic.com/assets/media/img/photo/2018/02/winners-of-the-2018-underwater-phot/u01_104TobiasFriedrich-1/original.jpg"
+          alt="" />
+      </div>
+      <div class="tile scale-anm flyers all">
+        <img src="https://i.pinimgs.com/originals/62/2e/6f/622e6fc1f201ef857cf264a67b1ca944.jpg" alt="" />
+      </div>
+    </div>
+
+    <div style="clear:both;"></div>
+  </section>
+
+  <!-- **************************************End Portfolio section************************** -->
+
+
+  <!-- **************************************Services section************************** -->
+
+
   <section id="section__services">
     <article class="artice-services partie1">
-        <h1><span style="font-size: 5rem;">Services</span></h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Culpa reiciendis enim delectus rerum tempore.
-        </p>
+      <h1><span style="font-size: 5rem;">Services</span></h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Culpa reiciendis enim delectus rerum tempore.
+      </p>
     </article>
     <img src="Design/Assets/png/pc.png" class="artice-services partie2" />
     <article class="artice-services partie3">
-        <section class="section__type__services type">
-            <div class="pus-service">
-                <img src="Design/Assets/svg/favorite.svg">
-            </div>
-            <div>
-                <h1>Service1</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Recusandae, cum eius non quos mollitia vitae laborum error dignissimos,
-                    odit unde aut tenetur molestiae esse rerum quasi .
-                </p>
-            </div>
-        </section>
-        <section class="section__type__services type">
-            <div class="pus-service">
-                <img src="Design/Assets/svg/lightbulb.svg">
-            </div>
-            <div>
-                <h1>Service2</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Recusandae, cum eius non quos mollitia vitae laborum error dignissimos,
-                    odit unde aut tenetur molestiae esse rerum quasi .
-                </p>
-            </div>
-        </section>
-        <section class="section__type__services type">
-            <div class="pus-service">
-                <img src="Design/Assets/svg/hourglass.svg">
-            </div>
-            <div>
-                <h1>Service3</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Recusandae, cum eius non quos mollitia vitae laborum error dignissimos,
-                    odit unde aut tenetur molestiae esse rerum quasi .
-                </p>
-            </div>
-        </section>
+      <section class="section__type__services type">
+        <div class="pus-service">
+          <img src="Design/Assets/svg/favorite.svg">
+        </div>
+        <div>
+          <h1>Service1</h1>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Recusandae, cum eius non quos mollitia vitae laborum error dignissimos,
+            odit unde aut tenetur molestiae esse rerum quasi .
+          </p>
+        </div>
+      </section>
+      <section class="section__type__services type">
+        <div class="pus-service">
+          <img src="Design/Assets/svg/lightbulb.svg">
+        </div>
+        <div>
+          <h1>Service2</h1>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Recusandae, cum eius non quos mollitia vitae laborum error dignissimos,
+            odit unde aut tenetur molestiae esse rerum quasi .
+          </p>
+        </div>
+      </section>
+      <section class="section__type__services type">
+        <div class="pus-service">
+          <img src="Design/Assets/svg/hourglass.svg">
+        </div>
+        <div>
+          <h1>Service3</h1>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Recusandae, cum eius non quos mollitia vitae laborum error dignissimos,
+            odit unde aut tenetur molestiae esse rerum quasi .
+          </p>
+        </div>
+      </section>
     </article>
-</section>
+  </section>
 
-<section class="clients">
+  <!-- **************************************End Services section************************** -->
+
+
+  <!-- **************************************Clients section************************** -->
+
+  <section class="clients">
     <h1>Our Amazing Clients</h1>
     <div class="clients__fcontainer">
       <div class="clients__box"><img src="Design/Assets/png/client3.png" alt="client_logo1"></div>
@@ -199,15 +273,20 @@
       <div class="clients__box"><img src="Design/Assets/png/client3.png" alt="client_logo1"></div>
       <div class="clients__box"><img src="Design/Assets/png/client4.png" alt="client_logo1"></div>
     </div>
-</section>
+  </section>
+
+  <!-- **************************************End Clients section************************** -->
 
 
+  <!-- **************************************Footer section************************** -->
 
   <!-- Footer -->
   <footer class="footer">
     <section class="Footer">
     </section>
   </footer>
+
+  <!-- **************************************End Footer section************************** -->
 
 </body>
 <script>
@@ -223,5 +302,21 @@
 <!-- JS, Popper.js, and jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.js"></script>
+
+<script>
+  $(function () {
+    var selectedClass = "";
+    $(".fil-cat").click(function () {
+      selectedClass = $(this).attr("data-rel");
+      $("#portfolio").fadeTo(100, 0.1);
+      $("#portfolio div").not("." + selectedClass).fadeOut().removeClass('scale-anm');
+      setTimeout(function () {
+        $("." + selectedClass).fadeIn().addClass('scale-anm');
+        $("#portfolio").fadeTo(300, 1);
+      }, 300);
+
+    });
+  });
+</script>
 
 </html>
