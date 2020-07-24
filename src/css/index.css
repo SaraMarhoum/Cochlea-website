@@ -310,11 +310,109 @@ nav.black{
 
   /* **************************************Video section************************** */
  
-  #myVideo { 
+  #myVideo {
+ 
     width: 100%;
 }
 
 
+
+
+
+
+#section__services {
+  /* border: 20px solid rgb(218, 218, 218); */
+  display: flex;
+  width: 100%;
+  margin: 30px auto;
+  color: white;
+
+}
+
+.artice-services {
+  width: 35%;
+  background-color: rgb(33, 33, 33);
+}
+
+h1,
+span {
+  font-size: 2rem;
+  padding-bottom: 10px;
+}
+
+span {
+  border-bottom: 4px solid white;
+}
+
+p {
+  padding-top: 20px;
+}
+
+.partie1 {
+  padding: 60px;
+}
+
+.pus-service {
+  position: relative;
+  left: -60px;
+  background-color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px black;
+  margin: 10px;
+}
+
+.pus-service img {
+  margin: 20px;
+}
+
+.section__type__services {
+  display: flex;
+  padding: 20px;
+}
+
+@media (max-width: 800px) {
+  #section__services {
+      border: none;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+  }
+
+  .artice-services {
+      width: 100%;
+  }
+
+  .partie1 h1 {
+      padding: 10px;
+      border-bottom: 2px solid white;
+  }
+
+  .partie1 p {
+      padding: 30px;
+  }
+
+  .partie2 {
+      height: 300px;
+  }
+
+  .partie3 {
+      background-color: white;
+  }
+
+  .type {
+      background-color: rgb(33, 33, 33);
+      margin: 10px;
+      box-shadow: 0 0 20px black;
+  }
+
+  .pus-service {
+      position: relative;
+      left: 0;
+  }
+
+}
 
 
 

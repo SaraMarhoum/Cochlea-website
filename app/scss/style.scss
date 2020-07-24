@@ -27,6 +27,10 @@
     padding-top: 116px;
     padding-bottom: 140px;
 
+    h1{
+      font-size: 3.6rem;
+    }
+
     -webkit-animation-duration: 10s;
     animation-duration: 5s;
     -webkit-animation-fill-mode: both;
@@ -119,6 +123,9 @@
   .Footer__copyright{
     height: 40px;
     text-align: center;
+    p{
+      padding-top: 0px;
+    }
   }
   
 }
