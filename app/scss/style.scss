@@ -29,7 +29,7 @@
     padding-top: 116px;
     padding-bottom: 140px;
 
-    h1{
+    h1 {
       font-size: 3.6rem;
     }
 
@@ -76,6 +76,7 @@
     }
   }
 }
+
 /* ************************************** FIN Abour Us section************************** */
 
 
@@ -90,109 +91,142 @@
   // height: 400px;
   color: white;
   width: 100%;
-  .footer__flex_container{
-  padding-top: 90px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
-  .box {
-    text-align: center;
-    list-style-type: none;
-  }
-  .box h3{
-    font-weight: 700;
-  }
-  .footer__quickLinks ul{
-    list-style-type: none;
-  }
-  .footer__quickLinks, ul, li, a{
-    color: white;
-  }
-  .footer__quickLinks, ul, li, a:hover{
-    font-size: 18px;
-  }
-  .footer__logoSM {
-    .logo__footer{
-      width: 98px;
+
+  .footer__flex_container {
+    padding-top: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .box {
+      text-align: center;
+      list-style-type: none;
+    }
+
+    .box h3 {
+      font-weight: 700;
+    }
+
+    .footer__quickLinks ul {
+      list-style-type: none;
+    }
+
+    .footer__quickLinks,
+    ul,
+    li,
+    a {
+      color: white;
+    }
+
+    .footer__quickLinks,
+    ul,
+    li,
+    a:hover {
+      font-size: 18px;
+    }
+
+    .footer__logoSM {
+      .logo__footer {
+        width: 98px;
+      }
+    }
+
+    .footer__contact {
+      padding-bottom: 20px;
     }
   }
-  .footer__contact{
-    padding-bottom: 20px;
-  }
-  }
-  hr{
+
+  hr {
     width: 50%;
     margin: auto;
   }
-  .Footer__copyright{
+
+  .Footer__copyright {
     height: 40px;
     text-align: center;
-    p{
+
+    p {
       padding-top: 0px;
     }
   }
-  
+
 }
 
 
 @media screen and (max-width: 1163px) {
-  .Footer{
-    .footer__flex_container{
+  .Footer {
+    .footer__flex_container {
       .footer__logoSM {
-        .logo__footer{
+        .logo__footer {
           width: 50px;
         }
-        img{
+
+        img {
           width: 30px;
         }
-        p{
+
+        p {
           display: none;
         }
-        h3{
+
+        h3 {
           font-size: 18px;
         }
       }
-      .footer__contact{
+
+      .footer__contact {
         padding-top: 44px;
       }
     }
   }
 }
+
 /* **************************************FIN Footer section************************** */
 
 
 
 /* **************************************Clients section************************** */
 
-.clients{
-background-color: rgb(241, 241, 241);
-margin-top: -31px;
-h1{
-  text-align: center;
-  font-size: 3.6rem;
-  font-weight: 700;
-  padding-top: 50px;
-}
-.clients__fcontainer{
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  padding-bottom: 90px;
-  padding-top: 90px;
-  img{
-    border-radius: 60px;
-    width: 122px;
-    height: 114px;
-    box-shadow: 8px 7px 14px rgb(221, 221, 221);;
+.clients {
+  background-color: rgb(241, 241, 241);
+  margin-top: -31px;
+
+  h1 {
+    text-align: center;
+    font-size: 3.6rem;
+    font-weight: 700;
+    padding-top: 50px;
+  }
+
+  .clients__fcontainer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-bottom: 90px;
+    padding-top: 90px;
+
+    img {
+      border-radius: 60px;
+      width: 122px;
+      height: 114px;
+      box-shadow: 8px 7px 14px rgb(221, 221, 221);
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+    }
+
+    /* Rotation */
+    img:hover{
+      -webkit-transform: rotate(-15deg);
+      transform: rotate(-15deg);
+    }
   }
 }
-}
 
-@media screen and (max-width: 778px){
-  .clients{
-    .clients__fcontainer{
-      .clients__box{
+@media screen and (max-width: 778px) {
+  .clients {
+    .clients__fcontainer {
+      .clients__box {
         padding: 2%;
       }
     }
