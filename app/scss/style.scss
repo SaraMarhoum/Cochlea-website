@@ -11,6 +11,8 @@
 
 // $px18: 1.125em;
 
+/* **************************************Abour Us section************************** */
+
 .aboutus {
   background-image: url(../../Design/Assets/png/MARIA111-2048x546.png);
   background-position: 38%;
@@ -74,8 +76,11 @@
     }
   }
 }
+/* ************************************** FIN Abour Us section************************** */
 
 
+
+/* **************************************Footer section************************** */
 
 .Footer {
   background-image: url(../../Design/Assets/png/footerBackground.jpg);
@@ -154,6 +159,44 @@
     }
   }
 }
+/* **************************************FIN Footer section************************** */
 
+
+
+/* **************************************Clients section************************** */
+
+.clients{
+background-color: rgb(241, 241, 241);
+margin-top: -31px;
+h1{
+  text-align: center;
+  font-size: 3.6rem;
+  font-weight: 700;
+  padding-top: 50px;
+}
+.clients__fcontainer{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-bottom: 90px;
+  padding-top: 90px;
+  img{
+    border-radius: 60px;
+    width: 122px;
+    height: 114px;
+    box-shadow: 8px 7px 14px rgb(221, 221, 221);;
+  }
+}
+}
+
+@media screen and (max-width: 778px){
+  .clients{
+    .clients__fcontainer{
+      .clients__box{
+        padding: 2%;
+      }
+    }
+  }
+}
 
 @import "test";
