@@ -84,7 +84,7 @@
 /* **************************************Footer section************************** */
 
 .Footer {
-  background-image: url(../../Design/Assets/png/footerBackground.jpg);
+  background-image: url(../../Design/Assets/png/footerBackgroundBlack.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -196,14 +196,14 @@
     text-align: center;
     font-size: 3.6rem;
     font-weight: 700;
-    padding-top: 50px;
+    padding-top: 135px;
   }
 
   .clients__fcontainer {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding-bottom: 90px;
+    padding-bottom: 164px;
     padding-top: 90px;
 
     img {
