@@ -7,7 +7,8 @@
   <!-- <link href="Design\Assets\png\coat-of-arms-of-morocco-logo-D-1.png" rel="shortcut icon" /> -->
   <title>Cochlea Prod</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Exo+2&display=swap"
+    rel="stylesheet"> -->
   <!--Boostrap CDN-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css">
@@ -21,9 +22,6 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap');
   </style>
@@ -31,45 +29,41 @@
 
 <body>
 
-  <!-- **************************************Header section************************** -->
-
   <header class="header">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html"><img src="./images/logo/logo cochlea .png" alt="" width="50px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><img src="./images/uk.png" style="width: 16px;" alt=""></a>
+              <img src="./images/flag.png" style="width: 16px;" alt=""></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
-   <!-- Carousel slide -->
+     <!-- Carousel indicators -->
     <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -104,10 +98,7 @@
 
   </header> -->
 
-  <!-- ************************************** End Header section************************** -->
-
-
-  <!-- **************************************About Us section************************** -->
+<!-- SECTION ABOUT US-->
   <div class="aboutus">
     <div class="aboutus__container">
       <h4>
@@ -142,153 +133,20 @@
     </div>
   </div>
 
-  <!-- ************************************** End About Us section************************** -->
-
-
-  <!-- **************************************Video section************************** -->
-
   <section class="video">
     <video autoplay muted loop id="myVideo">
-      <source src="Design/Assets/vidéo/for web site hd.mp4" type="video/mp4">
+      <source src="./Design\Assets\for web site hd.mp4" type="video/mp4">
     </video>
   </section>
 
-  <!-- **************************************End Video section************************** -->
 
 
-  <!-- **************************************Portfolio section************************** -->
-
-
-  <section class="Portfolio">
-    <h1>Portfolio Gallery</h1>
-    <div class="toolbar mb2 mt2">
-      <button class="btn fil-cat" href="" data-rel="all">All</button>
-      <button class="btn fil-cat" data-rel="web">Websites</button>
-      <button class="btn fil-cat" data-rel="flyers">Flyers</button>
-      <button class="btn fil-cat" data-rel="bcards">Business Cards</button>
-    </div>
-
-    <div id="portfolio">
-      <div class="tile scale-anm web all">
-        <img
-          src="https://images.unsplash.com/photo-1556103255-4443dbae8e5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-          alt="" />
-      </div>
-      <div class="tile scale-anm bcards all">
-        <img src="https://i.pinimg.com/originals/53/31/fc/5331fcab06dc662b9ea797b99d2b4b8f.jpg" alt="" />
-      </div>
-      <div class="tile scale-anm web all">
-        <img
-          src="https://static.boredpanda.com/blog/wp-content/uploads/2015/05/travel-nature-photography-depression-rescue-william-patino6.jpg"
-          alt="" />
-      </div>
-      <div class="tile scale-anm web all">
-        <img src="https://expertphotography.com/wp-content/uploads/2018/07/nature-photography.jpg" alt="" />
-      </div>
-      <div class="tile scale-anm flyers all">
-        <img src="https://phototrend.fr/wp-content/uploads/2019/04/lonely-tree-david-hall-759x500.jpg" alt="" />
-      </div>
-      <div class="tile scale-anm bcards all">
-        <img
-          src="https://cdn.theatlantic.com/assets/media/img/photo/2019/02/winners-2019-underwater-photographe-2/u01_MCPOTY-1/original.jpg"
-          alt="" />
-      </div>
-      <div class="tile scale-anm flyers all">
-        <img
-          src="https://cdn.theatlantic.com/assets/media/img/photo/2018/02/winners-of-the-2018-underwater-phot/u01_104TobiasFriedrich-1/original.jpg"
-          alt="" />
-      </div>
-      <div class="tile scale-anm flyers all">
-        <img src="https://i.pinimgs.com/originals/62/2e/6f/622e6fc1f201ef857cf264a67b1ca944.jpg" alt="" />
-      </div>
-    </div>
-
-    <div style="clear:both;"></div>
-  </section>
-
-  <!-- **************************************End Portfolio section************************** -->
-
-
-  <!-- **************************************Services section************************** -->
-
-
-  <section id="section__services">
-    <article class="artice-services partie1">
-      <h1><span style="font-size: 5rem;">Services</span></h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Culpa reiciendis enim delectus rerum tempore.
-      </p>
-    </article>
-    <img src="Design/Assets/png/pc.png" class="artice-services partie2" />
-    <article class="artice-services partie3">
-      <section class="section__type__services type">
-        <div class="pus-service">
-          <img src="Design/Assets/svg/favorite.svg">
-        </div>
-        <div>
-          <h1>Service1</h1>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Recusandae, cum eius non quos mollitia vitae laborum error dignissimos,
-            odit unde aut tenetur molestiae esse rerum quasi .
-          </p>
-        </div>
-      </section>
-      <section class="section__type__services type">
-        <div class="pus-service">
-          <img src="Design/Assets/svg/lightbulb.svg">
-        </div>
-        <div>
-          <h1>Service2</h1>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Recusandae, cum eius non quos mollitia vitae laborum error dignissimos,
-            odit unde aut tenetur molestiae esse rerum quasi .
-          </p>
-        </div>
-      </section>
-      <section class="section__type__services type">
-        <div class="pus-service">
-          <img src="Design/Assets/svg/hourglass.svg">
-        </div>
-        <div>
-          <h1>Service3</h1>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Recusandae, cum eius non quos mollitia vitae laborum error dignissimos,
-            odit unde aut tenetur molestiae esse rerum quasi .
-          </p>
-        </div>
-      </section>
-    </article>
-  </section>
-
-  <!-- **************************************End Services section************************** -->
-
-
-  <!-- **************************************Clients section************************** -->
-
-  <section class="clients">
-    <h1>Our Amazing Clients</h1>
-    <div class="clients__fcontainer">
-      <div class="clients__box"><img src="Design/Assets/png/client3.png" alt="client_logo1"></div>
-      <div class="clients__box"><img src="Design/Assets/png/client4.png" alt="client_logo1"></div>
-      <div class="clients__box"><img src="Design/Assets/png/client3.png" alt="client_logo1"></div>
-      <div class="clients__box"><img src="Design/Assets/png/client4.png" alt="client_logo1"></div>
-      <div class="clients__box"><img src="Design/Assets/png/client3.png" alt="client_logo1"></div>
-      <div class="clients__box"><img src="Design/Assets/png/client4.png" alt="client_logo1"></div>
-    </div>
-  </section>
-
-  <!-- **************************************End Clients section************************** -->
-
-
-  <!-- **************************************Footer section************************** -->
 
   <!-- Footer -->
   <footer class="footer">
-    <section class="Footer">
-    </section>
+    <div class="footer_recommmandation">
+    </div>
   </footer>
-
-  <!-- **************************************End Footer section************************** -->
 
 </body>
 <script>
@@ -298,30 +156,11 @@
 </script>
 <script>
   $(document).ready(function () {
-    $('.Footer').load("Hero/footer.html");
+    $('.footer_recommmandation').load("Hero/footer.html");
   });
 </script>
 <!-- JS, Popper.js, and jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.js"></script>
-
-<script>
-  $(function () {
-    var selectedClass = "";
-    $(".fil-cat").click(function () {
-      selectedClass = $(this).attr("data-rel");
-      $("#portfolio").fadeTo(100, 0.1);
-      $("#portfolio div").not("." + selectedClass).fadeOut().removeClass('scale-anm');
-      setTimeout(function () {
-        $("." + selectedClass).fadeIn().addClass('scale-anm');
-        $("#portfolio").fadeTo(300, 1);
-      }, 300);
-
-    });
-  });
-</script>
 
 </html>
