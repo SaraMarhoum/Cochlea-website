@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <link href="Design\Assets\png\coat-of-arms-of-morocco-logo-D-1.png" rel="shortcut icon" /> -->
-        <title>Cochlea Prod</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      
-        <!--Boostrap CDN-->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css">
-        <!--Animation CSS CDN-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
-        <!--link css-->
-        <link rel="stylesheet" href="src/css/normalize.css">
-        <link rel="stylesheet" href="src/css/style.css">
-        <link rel="stylesheet" href="src/css/index.css">
-        <link rel="stylesheet" href="app/scss/style.scss">
-      
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-        
-      
-        <style>
-          @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap');
-        </style>
-      
-      <!-- back to top button -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-      <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
-      
-      
-      </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="Design\Assets\png\coat-of-arms-of-morocco-logo-D-1.png" rel="shortcut icon" /> -->
+    <title>Cochlea Prod</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--Boostrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css">
+    <!--Animation CSS CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+    <!--link css-->
+    <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/index.css">
+    <link rel="stylesheet" href="app/scss/style.scss">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap');
+    </style>
+
+    <!-- back to top button -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+
+
+</head>
 
 <body>
 
@@ -59,7 +59,7 @@
 
     <section class="contact__contact1_wraper">
         <div class="contact__contact1_box1">
-            <img src="Design/Assets/png/cochlea About us.png" style="width: 116%; margin-left: -74px;">
+            <img src="Design/Assets/png/cochlea About us.png" style="width:100%;height: 100%;">
         </div>
         <div class="contact__contact1_box2">
             <div class="contact__contact1_box2-1">
@@ -103,6 +103,87 @@
         </div>
     </section>
 
+    <section class="contact__contactform_wraper">
+        <h2>Tell us about your project</h2>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                    <form id="contact-form" name="myForm" class="form" action="#" onsubmit="return validateForm()"
+                        method="POST" role="form">
+
+                        <div class="form-group">
+                            <label class="form-label" id="nameLabel" for="name"></label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Name *"
+                                tabindex="1">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" id="phoneLabel" for="phone"></label>
+                            <input class="form-control" id="phone" name="phone" placeholder="Phone" tabindex="1">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" id="emailLabel" for="email"></label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email *"
+                                tabindex="2">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" id="subjectLabel" for="sublect"></label>
+                            <input type="text" class="form-control" id="subject" name="subject"
+                                placeholder="Project type *" tabindex="3">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" id="messageLabel" for="message"></label>
+                            <textarea rows="6" cols="60" name="message" class="form-control" id="message"
+                                placeholder="Your message" tabindex="4"></textarea>
+                        </div>
+
+                        <div class="text-center margin-top-25">
+                            <button type="submit" class="btn btn-mod btn-border btn-large">Send Message</button>
+                        </div>
+
+                    </form><!-- End form -->
+
+                </div><!-- End col -->
+
+            </div><!-- End row -->
+
+        </div><!-- End container -->
+
+    </section>
+
+
+    <section class="contact__socialm">
+        <div class="contact__socialm_wraper">
+            <div class="contact__socialm_title">MEET US ON SOCIAL NETWORKS</div><br>
+            <img src="../Design/Assets/svg/black_instagram.svg" style="cursor: pointer; width: 45px;">
+            <img src="../Design/Assets/svg/black_facebook.svg" style="cursor: pointer; width: 45px;">
+            <img src="../Design/Assets/svg/black_youtube.svg" style="cursor: pointer; width: 45px;">
+            <img src="../Design/Assets/svg/black_linkdin.svg" style="cursor: pointer; width: 45px;">
+            <img src="../Design/Assets/svg/black_twitter.svg" style="cursor: pointer; width: 45px;">
+        </div>
+
+    </section>
+
+
+    <!-- **************************************Footer section************************** -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <section class="Footer">
+        </section>
+    </footer>
+
+    <!-- **************************************End Footer section************************** -->
+
+
+
 
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -122,6 +203,70 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.js"></script> -->
 
+    <script>
+        function validateForm() {
+            var n = document.getElementById('name').value;
+            var e = document.getElementById('email').value;
+            var s = document.getElementById('subject').value;
+            var m = document.getElementById('message').value;
+            var onlyLetters = /^[a-zA-Z\s]*$/;
+            var onlyEmail =
+                /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+
+            if (n == "" || n == null) {
+                document.getElementById('nameLabel').innerHTML = ('Please enter your name');
+                document.getElementById('name').style.borderColor = "red";
+                return false;
+            }
+
+
+            if (!n.match(onlyLetters)) {
+                document.getElementById('nameLabel').innerHTML = ('Please enter only letters');
+                document.getElementById('name').style.borderColor = "red";
+                return false;
+            }
+
+            if (e == "" || e == null) {
+                document.getElementById('emailLabel').innerHTML = ('Please enter your email');
+                document.getElementById('email').style.borderColor = "red";
+                return false;
+            }
+
+            if (!e.match(onlyEmail)) {
+                document.getElementById('emailLabel').innerHTML = ('Please enter a valid email address');
+                document.getElementById('email').style.borderColor = "red";
+                return false;
+            }
+
+            if (s == "" || s == null) {
+                document.getElementById('subjectLabel').innerHTML = ('Please enter your subject');
+                document.getElementById('subject').style.borderColor = "red";
+                return false;
+            }
+
+            if (!s.match(onlyLetters)) {
+                document.getElementById('subjectLabel').innerHTML = ('Please enter only letters');
+                document.getElementById('subject').style.borderColor = "red";
+                return false;
+            }
+
+            if (m == "" || m == null) {
+                document.getElementById('messageLabel').innerHTML = ('Please enter your message');
+                document.getElementById('message').style.borderColor = "red";
+                return false;
+            } else {
+                return true;
+            }
+
+        }
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('.Footer').load("Hero/footer.html");
+        });
+    </script>
 
 </body>
 
