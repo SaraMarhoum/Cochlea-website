@@ -29,7 +29,7 @@ body {
     overflow-x: hidden;
 }
 
-section {
+.section {
     padding: 3.9em 0;
 }
 
@@ -70,6 +70,23 @@ header h1 {
 
 header h4 {
     font-size: 3rem;
+}
+
+/* h4{
+    line-height: 0.2 !important;
+} */
+
+.navbar{
+    margin-bottom: 0 !important;
+}
+
+.navbar-nav{
+    margin-top: 10xp !important;
+}
+
+.fixed-top {
+    position: fixed !important;
+
 }
 
 .navbar-nav {

@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
   <link rel="stylesheet" href="src/css/portfolio.css" />
+  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/normalize.css">
   <title>Photographer Portfolio</title>
 </head>
 
@@ -56,9 +58,9 @@
 
       <div class="bottomnav">
         <ul>
-          <li><a src="#">profile</a></li>
+          <li><a src="index.html">profile</a></li>
           <li><a src="#">portfolio</a></li>
-          <li><a src="#">contact</a></li>
+          <li><a src="contact.html">contact</a></li>
         </ul>
       </div>
     </div>
@@ -120,7 +122,23 @@
 		</div>
 	</div>
   
+   <!-- **************************************Footer section************************** -->
+
+  <!-- Footer -->
+  <footer class="footer">
+    <section class="Footer">
+    </section>
+  </footer>
+
+  <!-- **************************************End Footer section************************** --> 
+
 </body>
 <script src="src/js/portfolio.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $('.Footer').load("Hero/footer.html");
+  });
+</script>
 
 </html>
