@@ -176,6 +176,7 @@ nav.black {
         height: 80vh;
         text-align: center;
         background: rgba(0, 0, 0, 0.925);
+        /* width: 95%; */
     }
 
     .navbar-nav.ml-auto a:hover {
