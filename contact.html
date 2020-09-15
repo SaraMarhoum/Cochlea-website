@@ -36,6 +36,16 @@
 
 
         }
+
+        .navbar-nav {
+            margin-top: 0 !important;
+        }
+        .navbar-brand > img {
+            margin-top: -11px;
+        }
+        .navbar {
+            padding: 1.5rem 1rem !important;
+        }
     </style>
 
     <!-- back to top button -->
@@ -47,7 +57,13 @@
 
 <body>
 
-    <!-- Header -->
+
+      <!-- Back to top button -->
+<a id="button"></a>
+
+
+
+  <!-- **************************************Header section************************** -->
     <header class="header">
 
     </header>
@@ -277,6 +293,25 @@
     </script>
     <script src="src/js/main.js"></script>
     <script src="src/js/scripte.js"></script>
+
+
+    <!-- Back to top button script -->
+<script>
+    var btn = $('#button');
+    
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > 300) {
+        btn.addClass('show');
+      } else {
+        btn.removeClass('show');
+      }
+    });
+    
+    btn.on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop:0}, '300');
+    });
+    </script>
 
 </body>
 

@@ -12,9 +12,22 @@
   <link rel="stylesheet" href="src/css/about.css" />
   <link rel="stylesheet" href="src/css/style.css">
   <link rel="stylesheet" href="src/css/normalize.css">
+
+  
+    <!-- back to top button -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+
 </head>
 
 <body>
+
+  
+      <!-- Back to top button -->
+<a id="button"></a>
+
+
+  <!-- **************************************Header section************************** -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
       <div class="container">
@@ -159,6 +172,24 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" charset="utf-8"></script>
   <script src="src/js/main.js"></script>
   <script src="src/js/scripte.js"></script>
+
+  <!-- Back to top button script -->
+<script>
+  var btn = $('#button');
+  
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+      btn.addClass('show');
+    } else {
+      btn.removeClass('show');
+    }
+  });
+  
+  btn.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
+  });
+  </script>
 </body>
 
 <script>
@@ -166,5 +197,6 @@
     $('.Footer').load("Hero/footer.html");
   });
 </script>
+
 
 </html>
