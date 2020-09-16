@@ -23,31 +23,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap');
-
-        @media only screen and (max-width:767px) {
-            .navbar-nav.ml-auto {
-
-                width: 95%;
-            }
-
-
-        }
-
-        .navbar-nav {
-            margin-top: 0 !important;
-        }
-        .navbar-brand > img {
-            margin-top: -11px;
-        }
-        .navbar {
-            padding: 1.5rem 1rem !important;
-        }
-    </style>
-
     <!-- back to top button -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
@@ -58,14 +33,48 @@
 <body>
 
 
-      <!-- Back to top button -->
-<a id="button"></a>
+    <!-- Back to top button -->
+    <a id="button"></a>
 
 
 
-  <!-- **************************************Header section************************** -->
+    <!-- **************************************Header section************************** -->
     <header class="header">
-
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container">
+                <a href="index.html"><img src="./images/logo cochlea .png" alt="" width="50px"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img src="./images/uk.png" style="width: 16px;" alt=""></a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#"><img src="./images/flag.png" style="width: 16px;" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <section class="contact__hero_wraper">
@@ -296,21 +305,21 @@
 
 
     <!-- Back to top button script -->
-<script>
-    var btn = $('#button');
-    
-    $(window).scroll(function() {
-      if ($(window).scrollTop() > 300) {
-        btn.addClass('show');
-      } else {
-        btn.removeClass('show');
-      }
-    });
-    
-    btn.on('click', function(e) {
-      e.preventDefault();
-      $('html, body').animate({scrollTop:0}, '300');
-    });
+    <script>
+        var btn = $('#button');
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        });
     </script>
 
 </body>
