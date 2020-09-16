@@ -97,12 +97,7 @@
     flex: 0;
   }
   
-  .nav .profile .img {
-    /* border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    background-color: #B3B4AF; */
-  }
+
   .content{
     position: relative;
     bottom: 0px;
@@ -115,7 +110,7 @@
   }
   
   .img-wrapper .karina {
-    background-image: url('./img/profile.jpg');
+    background-image: url('../../Design/img/profile.jpg');
     background-size: cover;
     height: 610px;
     margin-left: 277px;
@@ -168,7 +163,7 @@
   .name {
     position: absolute;
     top: 38%;
-    left: -270px;
+    left: 39px;
     transform: translateY(-50%);
     font-size: 90px;
     font-family: 'Raiderfont';
@@ -194,6 +189,10 @@
   
   .bottomnav ul li:nth-child(2) {
     font-weight: bolder;
+  }
+  .bottomnav ul li a{
+    text-decoration: none;
+    color: white;
   }
   
   .bottomnav ul li:nth-child(2)::before {
