@@ -27,6 +27,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
 
+    <style>
+        @media only screen and (max-width:990px) {
+            .navbar-collapse {
+                margin-top: 13px;
+            }
+            .navbar-nav {
+                margin: auto;
+            }
+            .navbar {
+                padding: 1.5rem 1rem;
+            }
+        }
+        .navbar-brand>img {
+            margin-top: -11px;
+        }
+        ::before,
+        ::after {
+            content: normal !important;
+        }
+    </style>
 
 </head>
 
@@ -318,7 +338,9 @@
 
         btn.on('click', function (e) {
             e.preventDefault();
-            $('html, body').animate({ scrollTop: 0 }, '300');
+            $('html, body').animate({
+                scrollTop: 0
+            }, '300');
         });
     </script>
 
